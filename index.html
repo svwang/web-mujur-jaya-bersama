@@ -42,17 +42,19 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/templatemo-topic-listing.css" rel="stylesheet"> 
-        <link href="css/style.css" rel="stylesheet">     
+        <link href="css/style.css" rel="stylesheet"> 
+        <link href="css/form.css" rel="stylesheet"> 
     </head>
     
-    <body id="top">
+    <body id="top" class="bg-white">
         <main>
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">                        
                         <img src="img/logo.ico" alt="" width="50px">
                     </a>        
-    
+           
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -73,8 +75,11 @@
     
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_4">Contact</a>
+                            </li> 
+                            
+                            <li class="nav-item">
+                                <div class="" id="google_translate_element"></div>
                             </li>
-
                             <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
 
@@ -86,10 +91,8 @@
                             </li> -->
                         </ul>
 
-                        <!-- <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                        </div> -->
                     </div>
+                    
                 </div>
             </nav>
 
@@ -172,7 +175,7 @@
                     </div>
                 </div>
 
-                <div class="container-fluid">
+                <div class="container-fluid mb-2">
                     <div class="row">
                         <ul class="nav nav-tabs" id="myTab" role="tablist" data-aos="fade-up">
                             <li class="nav-item" role="presentation">
@@ -180,7 +183,7 @@
                             </li>
 
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Produk</button>
+                                <button class="nav-link" id="produk-tab" data-bs-toggle="tab" data-bs-target="#produk-tab-pane" type="button" role="tab" aria-controls="produk-tab-pane" aria-selected="true">Produk</button>
                             </li>
 
                             <li class="nav-item" role="presentation">
@@ -188,7 +191,7 @@
                             </li>
 
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Kegiatan</button>
+                                <button class="nav-link" id="kegiatan-tab" data-bs-toggle="tab" data-bs-target="#kegiatan-tab-pane" type="button" role="tab" aria-controls="kegiatan-tab-pane" aria-selected="false">Kegiatan</button>
                             </li>
                         </ul>
                     </div>
@@ -257,16 +260,16 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade bg-search" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
-                                    <form method="get" role="search" onsubmit="searchContent(event)" data-aos="zoom-in" class="bg-search">
-                                        <div class="input-group d-flex justify-content-end bg-search">
+                                <div class="tab-pane fade bg-white " id="produk-tab-pane" role="tabpanel" aria-labelledby="produk-tab" tabindex="0">
+                                    <!-- <form method="get" role="search" onsubmit="searchContent(event)" data-aos="zoom-in" class="bg-search">
+                                        <div class="input-group d-flex justify-content-end bg-white">
                                             <div class="" data-mdb-input-init>
                                                 <input type="text" id="form1" class="form-control2 p-1" style="padding-left: 10px !important;" placeholder="Search"/>
                                                 <i class="fa fa-search"></i>
                                             </div>                                                                        
                                         </div>
-                                    </form>
-                                    <div class="row bg-produk mt-3 p-2" data-aos="zoom-in" data-aos-duration="500">
+                                    </form> -->
+                                    <div class="row mt-3 p-2" data-aos="zoom-in" data-aos-duration="500">
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-3 bg-white p-1 w-40">
                                             <div class="img-container">
                                                 <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
@@ -274,6 +277,7 @@
                                             <div class="produk">
                                                 <h5 class="title-produk">Lobster</h5>
                                                 <p class="harga-produk">Rp630.000 /kg</p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-3 bg-white p-1 w-40">
@@ -283,6 +287,7 @@
                                             <div class="produk">
                                                 <h5 class="title-produk">Kerapu Merah</h5>
                                                 <p class="harga-produk">Rp126.000 /kg</p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
@@ -292,6 +297,7 @@
                                             <div class="produk">
                                                 <h5 class="title-produk">Ikan Layur Beku</h5>
                                                 <p class="harga-produk">Rp42.000 /kg</p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
@@ -301,6 +307,7 @@
                                             <div class="produk">
                                                 <h5 class="title-produk">Kerang Dara</h5>
                                                 <p class="harga-produk">Rp39.600 /kg</p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
@@ -310,6 +317,7 @@
                                             <div class="produk">
                                                 <h5 class="title-produk">Lobster</h5>
                                                 <p class="harga-produk">Rp630.000 /kg</p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
@@ -319,6 +327,7 @@
                                             <div class="produk">
                                                 <h5 class="title-produk">Lobster</h5>
                                                 <p class="harga-produk">Rp630.000 /kg</p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40 d-none hide">
@@ -327,7 +336,8 @@
                                             </div>
                                             <div class="produk">
                                                 <h5 class="title-produk">abc</h5>
-                                                <p class="harga-produk">Rp630.000 /kg</p>
+                                                <p class="harga-produk mb-0">Rp630.000 /kg</p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40 d-none hide">
@@ -337,14 +347,15 @@
                                             <div class="produk">
                                                 <h5 class="title-produk">cba</h5>
                                                 <p class="harga-produk">Rp630.000 <i class="text-end">/kg</i></p>
+                                                <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                             </div>
                                         </div>                                        
                                     </div>
                                     <div class="text-end">
-                                        <a href="produk.html" target="_blank">
+                                        <a href="produk.html">
                                             <p class="more-produk fs-3">
                                                 Lihat produk
-                                                <i class="fa-solid fa-arrow-right ml-5"></i>
+                                                <i class="fa-solid fa-arrow-right ml-2"></i>
                                             </p>
                                         </a>
                                     </div>
@@ -488,59 +499,198 @@
                                     </section>
                                 </div>
 
-                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                                <div class="tab-pane fade" id="kegiatan-tab-pane" role="tabpanel" aria-labelledby="kegiatan-tab" tabindex="0">
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <a href="topics-detail.html">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Composing Song</h5>
-
-                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                        </div>
-
-                                                        <span class="badge bg-music rounded-pill ms-auto">45</span>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid1.png">
+                                                        <source src="video/vid-1.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
                                                     </div>
-
-                                                    <img src="images/topics/undraw_Compose_music_re_wpiw.png" class="custom-block-image img-fluid" alt="">
-                                                </a>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <a href="topics-detail.html">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Online Music</h5>
-
-                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                        </div>
-
-                                                        <span class="badge bg-music rounded-pill ms-auto">45</span>
+                                    
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid2.png">
+                                                        <source src="video/vid-2.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
                                                     </div>
-
-                                                    <img src="images/topics/undraw_happy_music_g6wc.png" class="custom-block-image img-fluid" alt="">
-                                                </a>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="custom-block bg-white shadow-lg">
-                                                <a href="topics-detail.html">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mb-2">Podcast</h5>
-
-                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                        </div>
-
-                                                        <span class="badge bg-music rounded-pill ms-auto">20</span>
+                                    
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid3.png">
+                                                        <source src="video/vid-3.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
                                                     </div>
-
-                                                    <img src="images/topics/undraw_Podcast_audience_re_4i5q.png" class="custom-block-image img-fluid" alt="">
-                                                </a>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid4.png">
+                                                        <source src="video/vid-4.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
+                                                    </div>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid5.png">
+                                                        <source src="video/vid-5.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
+                                                    </div>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid6.png">
+                                                        <source src="video/vid-6.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
+                                                    </div>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid7.png">
+                                                        <source src="video/vid-7.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
+                                                    </div>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid8.png">
+                                                        <source src="video/vid-8.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
+                                                    </div>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid9.png">
+                                                        <source src="video/vid-9.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
+                                                    </div>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white p-0">
+                                                <div class="video-container position-relative">
+                                                    <video class="interactiveVideo w-100" poster="video/thumnail/thamnail-vid10.png">
+                                                        <source src="video/vid-10.mp4" type="video/mp4">
+                                                    </video>
+                                    
+                                                    <!-- Tombol play/pause yang berdenyut -->
+                                                    <div class="playButton play-btn position-absolute top-50 start-50 translate-middle">
+                                                        <span class="pulse"></span>
+                                                    </div>
+                                    
+                                                    <!-- Tombol fullscreen -->
+                                                    <div class="fullscreenButton fullscreen-btn position-absolute top-0 end-0 m-2">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -550,68 +700,6 @@
                     </div>
                 </div>
             </section>
-
-
-            <!-- <section class="timeline-section section-padding" id="section_3">
-                <div class="section-overlay"></div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-12 text-center">
-                            <h2 class="text-white mb-4">How does it work?</h1>
-                        </div>
-
-                        <div class="col-lg-10 col-12 mx-auto">
-                            <div class="timeline-container">
-                                <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
-                                    <div class="list-progress">
-                                        <div class="inner"></div>
-                                    </div>
-
-                                    <li>
-                                        <h4 class="text-white mb-3">Search your favourite topic</h4>
-
-                                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, cumque magnam? Sequi, cupiditate quibusdam alias illum sed esse ad dignissimos libero sunt, quisquam numquam aliquam? Voluptas, accusamus omnis?</p>
-
-                                        <div class="icon-holder">
-                                          <i class="bi-search"></i>
-                                        </div>
-                                    </li>
-                                    
-                                    <li>
-                                        <h4 class="text-white mb-3">Bookmark &amp; Keep it for yourself</h4>
-
-                                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis est vel quo, nihil repellat quia velit error modi earum similique odit labore. Doloremque, repudiandae?</p>
-
-                                        <div class="icon-holder">
-                                          <i class="bi-bookmark"></i>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <h4 class="text-white mb-3">Read &amp; Enjoy</h4>
-
-                                        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vero quisquam, rem assumenda similique voluptas distinctio, iste est hic eveniet debitis ut ducimus beatae id? Quam culpa deleniti officiis autem?</p>
-
-                                        <div class="icon-holder">
-                                          <i class="bi-book"></i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-12 text-center mt-5">
-                            <p class="text-white">
-                                Want to learn more?
-                                <a href="#" class="btn custom-btn custom-border-btn ms-3">Check out Youtube</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
 
             <section class="faq-section section-padding" id="section_3">
                 <div class="container">
@@ -690,69 +778,116 @@
 
             <section class="contact-section section-padding section-bg" id="section_4">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-12 text-center">
-                            <h2 class="mb-5">Kontak Kami</h2>
+                    
+                    <div class="wrapper">
+                        <div class="row mb-5 text-center">
+                            <div class="col-md-3 col-6">
+                                <div class="dbox w-100">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Address:</span><i><br>Bontoa, Kec. Mandai, Kabupaten Maros, Sulawesi Selatan</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="dbox w-100">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Phone:</span><br> <a href="tel://628114119788">0811-4119-788</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="dbox w-100">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Email:</span> <a href="mailto:mujurjayabersama@gmail.com" class="femail">mujurjayabersama@gmail.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="dbox w-100">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-globe"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Website</span> <a href="#" class="femail">mujurjayabersama.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-8 col-12 mb-4 mb-lg-0">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.7999088796241!2d119.54786361516166!3d-5.0434877962148565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbef90041fae85d%3A0x339172f0158ab4d7!2sGraha%20cemerlang%20maros!5e0!3m2!1sid!2sid!4v1724394673763!5m2!1sid!2sid"
-                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="row no-gutters">
+                            <div class="col-md-6 mr-5">
+                                <div class="contact-wrap w-100">
+                                    <h3 class="mb-4 text-center">Kontak Kami</h3>
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Nama Lengkap</label>
+                                                    <input type="text" class="form-control" name="name" id="name"
+                                                        placeholder="Nama anda">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Alamat Email</label>
+                                                    <input type="email" class="form-control" name="email" id="email"
+                                                        placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="subject">Subjek</label>
+                                                    <input type="text" class="form-control" name="subject" id="subject"
+                                                        placeholder="Subjek">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="#">Pesan</label>
+                                                    <textarea name="message" class="form-control" id="message" cols="30"
+                                                        rows="4" placeholder="Pesan"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Kirim Pesan" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 d-flex align-items-stretch">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.7999088796241!2d119.54786361516166!3d-5.0434877962148565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbef90041fae85d%3A0x339172f0158ab4d7!2sGraha%20cemerlang%20maros!5e0!3m2!1sid!2sid!4v1724394673763!5m2!1sid!2sid" width="100%" height="400"
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
-                            <h4 class="mb-3">Kantor</h4>
-
-                            <p>Jl. Poros Makassar, Kompleks Ruko Graha Cemelang, Blok I No. 20, Mandai, Maros Sulawesi
-                            Selatan. 90552</p>
-
-                            <hr>
-
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Telpon</span>
-
-                                <a href="tel: 305-240-9671" class="site-footer-link">
-                                    0811 411 9788
-                                </a>
-                            </p>
-
-                            <p class="d-flex align-items-center">
-                                <span class="me-2">Email</span>
-
-                                <a href="mailto:mujurjayabersama@gmail.com" class="site-footer-link femail">
-                                    mujurjayabersama@gmail.com
-                                </a>
-                            </p>
-                        </div>
-
-                        <!-- <div class="col-lg-3 col-md-6 col-12 mx-auto">
-                            <h4 class="mb-3">Dubai office</h4>
-
-                            <p>Burj Park, Downtown Dubai, United Arab Emirates</p>
-
-                            <hr>
-
-                            <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Phone</span>
-
-                                <a href="tel: 110-220-3400" class="site-footer-link">
-                                    110-220-3400
-                                </a>
-                            </p>
-
-                            <p class="d-flex align-items-center">
-                                <span class="me-2">Email</span>
-
-                                <a href="mailto:info@company.com" class="site-footer-link">
-                                    info@company.com
-                                </a>
-                            </p>
-                        </div> -->
-
+                    </div>
+                     
+                    <div class="col-lg-5 col-md-6 col-9 mx-auto mt-5 text-center">
+                        <hr>
+                        <ul class="d-flex p-3 justify-content-around list-unstyled">
+                            <li><a href="#"><img src="img/sosmed/instagram.png" alt="instagram" class="img-sosmed"></a></li>
+                            <li><a href="#"><img src="img/sosmed/facebook.png" alt="facebook" class="img-sosmed"></a></li>
+                            <li><a href="https://wa.me/628114119788?text=Halo%20saya%20ingin%20mengetahui%20lebih%20lanjut"
+                                    target="_blank"><img src="img/sosmed/whatsapp.png" alt="whatsapp" class="img-sosmed"></a></li>
+                        </ul>
+                        <hr>
                     </div>
                 </div>
             </section>
+
         </main>
 
         <footer class="site-footer section-padding">
@@ -804,17 +939,8 @@
                         </p>
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Indonesia</button>
-
-                            <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">English</button></li>
-                            </ul>
-                        </div>
-
-                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2024 PT.Mujur Jaya Bersama.</p>
+                    <div class="col-lg-2 col-md-4 col-12 ms-auto container-copyright">
+                        <p class="copyright-text">Copyright © 2024 PT.Mujur Jaya Bersama.</p>
                         <p class="copyright-text">All rights reserved.</p>
                         
                     </div>
@@ -822,6 +948,13 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- Back to top -->
+        <button onclick="topFunction()" id="myBtb" title="Kembali ke atas">
+            <i class="fas fa-angle-double-up icon-btb"></i>
+        </button>
+
 
 
         <!-- JAVASCRIPT FILES -->
@@ -832,8 +965,26 @@
         <script src="js/custom.js"></script>
         <script src="js/script.js"></script>
 
-       
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'id',  // Bahasa default halaman
+                        includedLanguages: 'id,en',  // Bahasa yang disediakan
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
 
+             // Force hiding of "original text" popup for menus, etc. (very annoying)
+                jQuery(selector).bind(
+                    "mouseenter mouseleave",
+                    function (event) {
+                        if (event.type === 'mouseenter') { google_trans_tt.css('z-index', -1000); }
+                        else { google_trans_tt.css('z-index', 1000); }
+                    }
+                );
+        </script>
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     </body>
 </html>
