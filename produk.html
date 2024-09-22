@@ -24,225 +24,265 @@
 
     <link href="css/templatemo-topic-listing.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!--
-
-TemplateMo 590 topic listing
-
-https://templatemo.com/tm-590-topic-listing
-
--->
+    <link rel="stylesheet" href="css/form.css">
+                            <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                            
+                            
 </head>
 
-<body class="topics-listing-page" id="top">
+<body class="topics-listing-page bg-white" id="top">
 
     <main>
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    
+                <a class="navbar-brand" href="index.html">                    
                     <img src="img/logo.ico" alt="" width="50px">
+                </a>            
+                
+                <a href="index.html">
+                    <div class="home-page-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
                 </a>
-        
-        
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
         
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="index.html">Beranda</a>
-                        </li>
-        
-                        
-                    </ul>
-        
-                    
+                        </li>                                
+                    </ul>                            
                 </div>
             </div>
         </nav>
 
-
         <header class="site-header d-flex flex-column justify-content-center align-items-center">
             <div class="container">
                 <div class="row align-items-center">
-
-                    <div class="col-lg-5 col-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
-
-                                <li class="breadcrumb-item active" aria-current="page">Produk</li>
-                            </ol>
-                        </nav>
-
+                    <div class="col-lg-5 col-12">        
                         <h2 class="text-white">Produk MJB</h2>
                     </div>
-
                 </div>
             </div>
+            <form  class="mt-5">
+                <div class="input-group d-flex justify-content-end">
+                    <div class="" data-mdb-input-init>
+                        <input type="text" id="form1" class="form-control3 p-1" style="padding-left: 10px !important;"
+                            placeholder="Search" />
+                        <i class="fa fa-search" style="font-size: 20px;"></i>
+                    </div>
+                </div>
+            </form>
         </header>
 
-
-        <section class="explore-section section-padding" id="section_2">
+        <section class="explore-section pt-3" id="section_2">            
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h2 class="mb-4">Daftar Ikan</h1>
+                        <h3 class="mb-1">Daftar Ikan</h1>
                     </div>
                 </div>
-            </div>
-        
-            <div class="container-fluid">
-                <!-- <div class="row">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="design-tab" data-bs-toggle="tab"
-                                data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane"
-                                aria-selected="true">Produk</button>
-                        </li>
-        
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pemasok-tab" data-bs-toggle="tab" data-bs-target="#pemasok-tab-pane"
-                                type="button" role="tab" aria-controls="pemasok-tab-pane" aria-selected="false">Pemasok</button>
-                        </li>
-        
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane"
-                                type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Suplai</button>
-                        </li>
-        
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane"
-                                type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Kegiatan</button>
-                        </li>
-        
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="education-tab" data-bs-toggle="tab"
-                                data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane"
-                                aria-selected="false">Segera Hadir</button>
-                        </li>
-                    </ul>
-                </div> -->
-            </div>
+            </div>            
         
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel"
-                                aria-labelledby="design-tab" tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="tab-pane fade bg-white " id="produk-tab-pane" role="tabpanel" aria-labelledby="produk-tab" tabindex="0"></div>
+                            
+                            <div class="row mt-3 p-2" data-aos="zoom-in" data-aos-duration="500">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-3 bg-white p-1 w-40">
+                                    <div class="img-container">
                                         <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
-                                        <div class="">
-                                            <h5 class="title-produk">Lobster</h5>
-                                            <p class="text-black harga-produk">Rp.630.000,00 /kg</p>
-                                        </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
-                                        <div class="">
-                                            <h5 class="title-produk">Lobster</h5>
-                                            <p class="text-black harga-produk">Rp.630.000,00 /kg</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
-                                        <div class="">
-                                            <h5 class="title-produk">Lobster</h5>
-                                            <p class="text-black harga-produk">Rp.630.000,00 /kg</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
-                                        <div class="">
-                                            <h5 class="title-produk">Lobster</h5>
-                                            <p class="text-black harga-produk">Rp.630.000,00 /kg</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
-                                        <div class="">
-                                            <h5 class="title-produk">Lobster</h5>
-                                            <p class="text-black harga-produk">Rp.630.000,00 /kg</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
-                                        <div class="">
-                                            <h5 class="title-produk">Lobster</h5>
-                                            <p class="text-black harga-produk">Rp.630.000,00 /kg</p>
-                                        </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Lobster</h5>
+                                        <p class="harga-produk">Rp630.000 /kg</p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                     </div>
                                 </div>
-                            </div>
-        
-                            <div class="tab-pane fade" id="pemasok-tab-pane" role="tabpanel" aria-labelledby="pemasok-tab"
-                                tabindex="0">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Advertising</h5>
-        
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-        
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">30</span>
-                                                </div>
-        
-                                                <img src="images/topics/undraw_online_ad_re_ol62.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-3 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/kerapu_merah.jpg" alt="lobster_foto" class="img-produk">
                                     </div>
-        
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Video Content</h5>
-        
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-        
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">65</span>
-                                                </div>
-        
-                                                <img src="images/topics/undraw_Group_video_re_btu7.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Viral Tweet</h5>
-        
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-        
-                                                    <span class="badge bg-advertising rounded-pill ms-auto">50</span>
-                                                </div>
-        
-                                                <img src="images/topics/undraw_viral_tweet_gndb.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kerapu Merah</h5>
+                                        <p class="harga-produk">Rp126.000 /kg</p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/ikan layur bekujfif.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Ikan Layur Beku</h5>
+                                        <p class="harga-produk">Rp42.000 /kg</p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/karang dara.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kerang Dara</h5>
+                                        <p class="harga-produk">Rp39.600 /kg</p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Udang Ronggeng</h5>
+                                        <p class="harga-produk">Rp546.000 /kg</p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kerang Hijau</h5>
+                                        <p class="harga-produk">Rp42.000 /kg</p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kerapu Coklat</h5>
+                                        <p class="harga-produk mb-0">Rp114.000 /kg</p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Ikan Jenaha</h5>
+                                        <p class="harga-produk">Rp60.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kerapu Coklat/Mosso</h5>
+                                        <p class="harga-produk">Rp114.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Ikan Batu</h5>
+                                        <p class="harga-produk">Rp60.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kakap Merah</h5>
+                                        <p class="harga-produk">Rp96.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Ikan Lolosi</h5>
+                                        <p class="harga-produk">Rp54.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Ikan Lolosi Ekor Kuning</h5>
+                                        <p class="harga-produk">Rp60.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kepiting Bakau</h5>
+                                        <p class="harga-produk">Rp186.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Cumi Setan/Kondom</h5>
+                                        <p class="harga-produk">Rp36.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Kakatua (WGGS)</h5>
+                                        <p class="harga-produk">Rp54.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Nila</h5>
+                                        <p class="harga-produk">Rp36.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Patin/Dori (WGGS)</h5>
+                                        <p class="harga-produk">Rp37.200 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-5 bg-white p-1 w-40">
+                                    <div class="img-container">
+                                        <img src="img/Produk/lobster.jfif" alt="lobster_foto" class="img-produk">
+                                    </div>
+                                    <div class="produk">
+                                        <h5 class="title-produk">Bandeng (WGGS)</h5>
+                                        <p class="harga-produk">Rp42.000 <i class="text-end">/kg</i></p>
+                                        <p class="keterangan-produk">Harga Area Makassar <i class="fas fa-info-circle"></i></p>
+                                    </div>
+                                </div>
+                            </div>                        
                         </div>
-        
                     </div>
                 </div>
         </section>
@@ -310,18 +350,8 @@ https://templatemo.com/tm-590-topic-listing
                     </p>
                 </div>
     
-                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Indonesia</button>
-    
-                        <ul class="dropdown-menu">
-                            <li><button class="dropdown-item" type="button">English</button></li>
-                        </ul>
-                    </div>
-    
-                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2024 PT.Mujur Jaya Bersama.</p>
+                <div class="col-lg-2 col-md-4 col-12 ms-auto container-copyright">
+                    <p class="copyright-text">Copyright © 2024 PT.Mujur Jaya Bersama.</p>
                     <p class="copyright-text">All rights reserved.</p>
     
                 </div>
@@ -329,12 +359,61 @@ https://templatemo.com/tm-590-topic-listing
             </div>
         </div>
     </footer>
+    
 
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("form1").addEventListener("input", function () {
+                const keyword = this.value.toLowerCase();
+                const items = document.querySelectorAll(".row .col-lg-2");
+
+                items.forEach((item) => {
+                    const textContent = item.textContent.toLowerCase();
+                    const matchesKeyword = textContent.includes(keyword);
+
+                    if (keyword === "") {
+                        item.style.display = ""; // Tampilkan semua item jika input kosong
+                    } else if (matchesKeyword) {
+                        item.style.display = ""; // Tampilkan item yang cocok
+                    } else {
+                        item.style.display = "none"; // Sembunyikan item yang tidak cocok
+                    }
+                });
+            });
+
+            
+            function searchContent(event) {
+                event.preventDefault(); // Mencegah halaman refresh
+
+                const keyword = document.getElementById("form1").value.toLowerCase();
+                const items = document.querySelectorAll(".row .col-lg-2");
+
+                items.forEach((item) => {
+                    const textContent = item.textContent.toLowerCase();
+                    const matchesKeyword = textContent.includes(keyword);
+
+                    if (matchesKeyword) {
+                        item.style.display = ""; // Tampilkan item yang cocok
+                    } else {
+                        item.style.display = "none"; // Sembunyikan item yang tidak cocok
+                    }
+                });
+            }
+
+            document.querySelector('.fa-search').addEventListener('click', function (event) {
+                searchContent(event);
+            });
+
+        });
+
+    </script>
+
 
 </body>
 
