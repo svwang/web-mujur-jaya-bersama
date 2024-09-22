@@ -1,18 +1,7 @@
-/*
-
-TemplateMo 590 topic listing
-
-https://templatemo.com/tm-590-topic-listing
-
-*/
-
-/*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
------------------------------------------*/
 :root {
   --white-color: #ffffff;
   --primary-color: #260f77;
-  --secondary-color: #1f63c9;
+  --secondary-color: #3868b1;
   --section-bg-color: #f0f8ff;
   --custom-btn-bg-color: #80d0c7;
   --custom-btn-bg-hover-color: #13547a;
@@ -48,6 +37,12 @@ https://templatemo.com/tm-590-topic-listing
 body {
   background-color: rgb(255, 255, 255);
   font-family: var(--body-font-family);
+  top: 0px !important;
+}
+
+/* Trenslite hide */
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none;
 }
 
 
@@ -174,8 +169,9 @@ strong {
   font-family: var(--title-font-family);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-medium);
-  padding: 15px 25px;
+  padding: 10px 20px;
   transition: all 0.3s;
+
 }
 
 .nav-tabs .nav-link:first-child {
@@ -187,8 +183,8 @@ strong {
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
 
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -248,9 +244,9 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  padding-top: 150px;
-  padding-bottom: 80px;
+  background-image: linear-gradient(15deg, var(--secondary-color) 0%, #80a9d0 100%);
+  padding-top: 100px;
+  padding-bottom: 0px;
 }
 
 .site-header .container {
@@ -330,7 +326,7 @@ strong {
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 10px 20px 10px 20px;
   background-color: #fff;
 }
@@ -770,6 +766,10 @@ blockquote {
 .page-item:last-child .page-link {
   background-color: var(--section-bg-color);
   border-radius: var(--border-radius-small);
+  -webkit-border-radius: var(--border-radius-small);
+  -moz-border-radius: var(--border-radius-small);
+  -ms-border-radius: var(--border-radius-small);
+  -o-border-radius: var(--border-radius-small);
 }
 
 .active>.page-link, .page-link.active {
@@ -1030,11 +1030,32 @@ blockquote {
   SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
-  border-bottom: 10px solid var(--secondary-color);
   position: relative;
+  z-index: 1;
+  background-color: var(--secondary-color);
+  color: #fff
 }
 
-.site-footer::after {
+.site-footer a {
+  color: #fff;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/img-footer.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.1) saturate(130%) contrast(90%);
+  z-index: -1;
+  -webkit-filter: brightness(0.1) saturate(130%) contrast(90%);
+}
+
+/* .site-footer::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1045,10 +1066,12 @@ blockquote {
   border-width: 0 0 200px 200px;
   border-color: transparent transparent var(--secondary-color) transparent;
   pointer-events: none;
-}
+  z-index: 1;
+} */
+
 
 .site-footer-title {
-  color: var(--primary-color);
+  color: #fff;
 }
 
 .site-footer .dropdown-menu {
@@ -1193,7 +1216,7 @@ blockquote {
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 0;
+    padding: 10px;
   }
 
   .nav-tabs .nav-link:first-child {
@@ -1344,5 +1367,6 @@ blockquote {
 
   .copyright-text {
     font-size: 0.7rem !important;
+    text-align: center;
   }
 }
