@@ -8,10 +8,6 @@ window.onload = function () {
     document.querySelector(".container-page").style.display = "block";
   }, 1000); // Delay 1000ms atau 1 detik
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> 802c431cc270641dfcbe260fbcc360666db2c0d3
 // Inisialisasi AOS untuk animasi
 AOS.init({
   duration: 1200, // Durasi animasi dalam milidetik
