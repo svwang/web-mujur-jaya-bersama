@@ -2,13 +2,11 @@
 // form email account emailjs
 
 window.onload = function () {
-  setTimeout(function () {
-    // Hilangkan spinner
-    document.querySelector(".loading-screen").style.display = "none";
+  // Hilangkan spinner
+  document.querySelector(".loading-screen").style.display = "none";
 
-    // Tampilkan konten halaman
-    document.querySelector(".container-page").style.display = "block";
-  }, 1000); // Delay 1000ms atau 1 detik
+  // Tampilkan konten halaman
+  document.querySelector(".container-page").style.display = "block";
 
   // Validasi input sebelum submit
   document
