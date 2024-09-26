@@ -1,4 +1,6 @@
 // Event ini akan dijalankan ketika seluruh elemen halaman selesai dimuat
+// form email account emailjs
+
 window.onload = function () {
   setTimeout(function () {
     // Hilangkan spinner
@@ -7,7 +9,76 @@ window.onload = function () {
     // Tampilkan konten halaman
     document.querySelector(".container-page").style.display = "block";
   }, 1000); // Delay 1000ms atau 1 detik
+
+  // Validasi input sebelum submit
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Ambil nilai input dari form
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let subject = document.getElementById("subject").value.trim();
+      let message = document.getElementById("message").value.trim();
+
+      // Validasi email
+      if (!validateEmail(email)) {
+        Swal.fire({
+          icon: "error",
+          title: "Email tidak valid!",
+          text: "Mohon masukkan email yang benar",
+        });
+        return;
+      }
+
+      // Validasi apakah field tidak kosong
+      if (name === "" || subject === "" || message === "") {
+        Swal.fire({
+          icon: "error",
+          title: "Form tidak lengkap!",
+          text: "Nama, Subjek, dan Pesan tidak boleh kosong.",
+        });
+        return;
+      }
+
+      // Sanitasi input sebelum dikirim
+      name = sanitizeInput(name);
+      subject = sanitizeInput(subject);
+      message = sanitizeInput(message);
+
+      // Kirim form melalui emailjs
+      emailjs.sendForm("service_snz9fuj", "template_z2rk5g7", this).then(
+        () => {
+          Swal.fire({
+            title: "Berhasil!",
+            text: "Pesan terkirim!",
+            icon: "success",
+          });
+        },
+        (error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Mohon maaf...",
+            text: "Silahkan tunggu beberapa saat lagi!",
+            footer:
+              '<a href="https://wa.me/628114119788">Atau klik disini, untuk kontak kami di Whatsapp?</a>',
+          });
+        }
+      );
+    });
 };
+
+// Function validasi email menggunakan regex
+function validateEmail(email) {
+  const re = /^[^\s@]+@gmail\.com$/; // Validasi hanya untuk @gmail.com
+  return re.test(String(email).toLowerCase());
+}
+
+// Function sanitasi input agar aman dari karakter berbahaya
+function sanitizeInput(input) {
+  return input.replace(/<\/?[^>]+(>|$)/g, ""); // Menghapus tag HTML
+}
 
 // Inisialisasi AOS untuk animasi
 AOS.init({
@@ -79,25 +150,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tambahkan video ke observer
     observer.observe(video);
   });
-});
 
-// Pencarian berdasarkan input
-document.getElementById("form1").addEventListener("input", function () {
-  const keyword = this.value.toLowerCase();
-  const tabContent = document.getElementById("myTabContent");
-  const items = tabContent.getElementsByClassName("col-lg-2");
+  // Integrasi ke whatsapp
+  const whatsappLinks = document.querySelectorAll(".whatsapp-link");
 
-  Array.from(items).forEach((item) => {
-    const textContent = item.textContent.toLowerCase();
-    const matchesKeyword = textContent.includes(keyword);
+  whatsappLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Mencegah link default
+      const productName = this.getAttribute("data-product-name");
+      const phoneNumber = "628114119788"; // Ganti dengan nomor yang sesuai
+      const message = `Saya ingin membeli produk: ${productName}`;
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+        message
+      )}`;
 
-    if (keyword === "") {
-      // Tampilkan semua item jika pencarian kosong
-      item.style.display = "";
-    } else {
-      // Tampilkan item jika sesuai dengan kata kunci
-      item.style.display = matchesKeyword ? "" : "none";
-    }
+      // Buka link WhatsApp baru
+      window.open(whatsappURL, "_blank");
+    });
   });
 });
 
