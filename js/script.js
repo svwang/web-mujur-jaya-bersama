@@ -188,3 +188,18 @@ function topFunction() {
   document.body.scrollTop = 0; // Untuk Safari
   document.documentElement.scrollTop = 0; // Untuk Chrome, Firefox, IE, dan Opera
 }
+
+const scrollContainer = document.querySelector(".scroll-x-overflow");
+const dots = document.querySelectorAll(".scroll-dots .dot");
+
+scrollContainer.addEventListener("scroll", () => {
+  const scrollPosition = scrollContainer.scrollLeft;
+  const scrollWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  const dotIndex = Math.round(
+    (scrollPosition / scrollWidth) * (dots.length - 1)
+  );
+
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === dotIndex);
+  });
+});
