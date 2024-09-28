@@ -1,3 +1,19 @@
+.quote-section .quote-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    /* Sesuaikan dengan kebutuhan */
+    height: 100%;
+    margin: 10px;
+}
+
+.quote-box:focus {
+    outline: none;
+    /* Menghilangkan outline ketika elemen difokuskan */
+}
+
+
 .goog-te-gadget {
     font-family: Roboto, 'Open Sans', sans-serif !important;
     text-transform: uppercase;
@@ -333,6 +349,63 @@ video {
 
 /* small size */
 @media (max-width: 576px) {
+
+    .container {
+        scroll-snap-type: x mandatory;
+        scroll-padding: 100%;
+    }
+
+    .child {
+        scroll-snap-align: center;
+    }
+
+    .scroll-x-overflow {
+        border: 1px solid lightgray;
+        padding: 1rem;
+        display: flex;
+        overflow-x: scroll;
+        scroll-padding: 0 50%;
+        scroll-snap-type: x mandatory;
+        justify-content: start !important;
+        border: none !important;
+    }
+
+    /* Menghilangkan default scrollbar */
+    .scroll-x-overflow {
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* Internet Explorer and Edge */
+    }
+
+    .scroll-x-overflow::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
+    /* Membuat scrollbar custom berupa titik */
+    .scroll-dots {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .scroll-dots .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: darkgray;
+        transition: background-color 0.3s;
+    }
+
+    /* Mengubah warna titik aktif */
+    .scroll-dots .dot.active {
+        background-color: var(--secondary-color);
+    }
+
+
     #myTabContent .title-produk {
         font-size: 4vw;
     }
